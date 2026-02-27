@@ -12,14 +12,13 @@ const packingListData = {
         items: [
             { id: "doc-passport", text: "護照（有效期限需 6 個月以上）" },
             { id: "doc-vjw", text: "VJW（Visit Japan Web）QR Code 截圖" },
-            { id: "doc-visa", text: "簽證 (確認是否辦妥)" },
-            { id: "doc-ticket", text: "機票 (電子/紙本確認單)" },
+            { id: "doc-ticket", text: "台灣虎航電子機票確認單" },
             { id: "doc-hotel", text: "住宿預訂證明" },
             { id: "doc-cash", text: "日幣現鈔（建議多換小額，如千圓鈔）" },
-            { id: "doc-credit-card", text: "信用卡（若有事先購買 JR 票券，需攜帶同一張卡）" },
-            { id: "doc-ic-card", text: "交通 IC 卡（Suica / PASMO / Kitaca）" },
+            { id: "doc-credit-card", text: "信用卡" },
+            { id: "doc-ic-card", text: "交通 IC 卡（Suica / PASMO 等）" },
             { id: "doc-insurance", text: "旅遊平安險保單" },
-            { id: "doc-id-copy", text: "台灣身分證影本（備用）" },
+            { id: "doc-id", text: "台灣身分證" },
             { id: "doc-health-card", text: "健保卡" },
             { id: "doc-emergency", text: "緊急聯絡資訊" }
         ]
@@ -29,41 +28,44 @@ const packingListData = {
         icon: "🔌",
         items: [
             { id: "elec-sim", text: "網卡 / eSIM（確認開通日期）" },
-            { id: "elec-powerbank", text: "行動電源（低溫耗電快，建議攜帶 2 顆）" },
+            { id: "elec-powerbank", text: "行動電源（⚠️ 僅限隨身攜帶，不可託運）" },
             { id: "elec-charger", text: "充電器" },
             { id: "elec-cable", text: "傳輸線" },
             { id: "elec-adapter", text: "轉接頭（日本為雙孔扁插，台灣可通用）" },
-            { id: "elec-camera", text: "相機 / 底片（低溫需注意電池保暖）" },
+            { id: "elec-camera", text: "相機 / GoPro" },
             { id: "elec-sim-pin", text: "取卡針" }
         ]
     },
     clothing: {
-        title: "個人衣物（含保暖）",
+        title: "個人衣物",
         icon: "👕",
         items: [
-            { id: "cloth-underwear", text: "換洗衣物（內衣褲 / 上衣 / 襪子）" },
-            { id: "cloth-pajamas", text: "睡衣（飯店多附浴衣，怕冷或不習慣可自備）" },
-            { id: "cloth-jacket", text: "防風防水羽絨外套（洋蔥式穿法）" },
-            { id: "cloth-heattech", text: "發熱衣 / 發熱褲（Heatech 極暖 / 超極暖）" },
-            { id: "cloth-pants", text: "一般長褲 / 刷毛褲" },
-            { id: "cloth-socks", text: "厚毛襪 / 羊毛襪（建議多帶）" },
-            { id: "cloth-scarf", text: "圍巾 / 脖圍" }
+            { id: "cloth-underwear", text: "換洗內衣褲（4 天份）" },
+            { id: "cloth-shirt", text: "上衣 / T恤（4 件）" },
+            { id: "cloth-pants", text: "長褲 / 短褲（2-3 件）" },
+            { id: "cloth-socks", text: "襪子（4-5 雙）" },
+            { id: "cloth-pajamas", text: "睡衣（飯店多有提供）" },
+            { id: "cloth-jacket", text: "薄外套 / 防風外套" },
+            { id: "cloth-swimsuit", text: "泳衣（如有飯店泳池或海邊行程）" },
+            { id: "cloth-shoes", text: "好走的運動鞋 / 休閒鞋" },
+            { id: "cloth-slippers", text: "拖鞋 / 涼鞋" }
         ]
     },
     toiletries: {
         title: "盥洗 / 保養 / 化妝",
         icon: "🧴",
         items: [
+            { id: "toil-toothbrush", text: "牙刷 / 牙膏（部分飯店不提供）" },
+            { id: "toil-skincare", text: "保養品（⚠️ 液體需≤100ml/瓶，總量≤1L）" },
+            { id: "toil-sunscreen", text: "防曬乳（沖繩陽光強）" },
+            { id: "toil-shampoo", text: "洗髮精 / 沐浴乳（可分裝或用飯店）" },
             { id: "toil-makeup", text: "化妝品（底妝 / 彩妝）" },
-            { id: "toil-skincare", text: "保養品（建議油類 / 霜類，日本氣候極乾）" },
-            { id: "toil-makeup-remover", text: "卸妝乳 / 卸妝油" },
+            { id: "toil-makeup-remover", text: "卸妝產品" },
             { id: "toil-cleanser", text: "洗面乳" },
-            { id: "toil-toothbrush", text: "牙刷 / 牙膏（日本提倡環保，部分飯店不提供）" },
-            { id: "toil-floss", text: "牙線棒 / 棉花棒" },
-            { id: "toil-shampoo", text: "洗髮乳 / 潤髮乳（飯店有，可自備慣用款）" },
-            { id: "toil-lotion", text: "高保濕乳液 / 護手霜" },
+            { id: "toil-lotion", text: "乳液 / 護手霜" },
             { id: "toil-lip-balm", text: "護唇膏" },
-            { id: "toil-contact", text: "隱形眼鏡 / 藥水" }
+            { id: "toil-contact", text: "隱形眼鏡 / 藥水" },
+            { id: "toil-floss", text: "牙線棒 / 棉花棒" }
         ]
     },
     medicine: {
@@ -81,15 +83,17 @@ const packingListData = {
         title: "其他必備",
         icon: "🎒",
         items: [
-            { id: "other-mask", text: "口罩（機上 / 人多處防護）" },
+            { id: "other-mask", text: "口罩（機上建議配戴）" },
+            { id: "other-sunglasses", text: "太陽眼鏡（沖繩陽光強）" },
+            { id: "other-hat", text: "遮陽帽" },
+            { id: "other-umbrella", text: "摺疊傘 / 雨具" },
+            { id: "other-eco-bag", text: "購物袋（環保袋，多備幾個）" },
+            { id: "other-bottle", text: "空水壺（過安檢後可裝水）" },
             { id: "other-laundry-bag", text: "髒衣袋 / 收納袋" },
-            { id: "other-bottle", text: "空水壺（日本水龍頭可生飲，攜帶容器較方便）" },
-            { id: "other-heat-pack", text: "暖暖包（貼式 / 手握，多準備）" },
-            { id: "other-umbrella", text: "摺疊傘（以防濕雪 / 暴風雪）" },
-            { id: "other-eco-bag", text: "購物袋（環保袋）" },
-            { id: "other-compression-bag", text: "衣物壓縮袋（厚重衣物好收納）" },
+            { id: "other-compression-bag", text: "衣物壓縮袋（預留伴手禮空間）" },
             { id: "other-wet-wipes", text: "濕紙巾 / 酒精棉片" },
-            { id: "other-shoes", text: "好穿的鞋子" }
+            { id: "other-tissues", text: "面紙 / 衛生紙" },
+            { id: "other-pen", text: "筆（填寫入境卡）" }
         ]
     }
 };
