@@ -5,15 +5,58 @@
 .hero {
     position: relative;
     height: 450px;
-    background: var(--bg-secondary);
-    background-image: url('../images/hero/itinerary-hero.jpg');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(135deg, #FF6B6B 0%, #E74C3C 50%, #C0392B 100%);
+    /* 地圖網格紋理 */
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 40px,
+            rgba(255, 255, 255, 0.02) 40px,
+            rgba(255, 255, 255, 0.02) 80px
+        );
+    background-size: 50px 50px, 50px 50px, 100% 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     border-bottom: var(--border-width-stroke) solid var(--border-strong);
+}
+
+/* 地圖路線裝飾 */
+.hero::before {
+    content: '🗺️';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 120px;
+    opacity: 0.1;
+    pointer-events: none;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.hero::after {
+    content: '✈️ ➜ 🏝️ ➜ ⛩️ ➜ 🏖️';
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    font-size: 40px;
+    opacity: 0.15;
+    pointer-events: none;
+    letter-spacing: 20px;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.15;
+        transform: scale(1.05);
+    }
 }
 
 .hero-overlay {
@@ -22,7 +65,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(44, 62, 80, 0.75), rgba(231, 76, 60, 0.65));
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.7), rgba(231, 76, 60, 0.6));
 }
 
 .hero-content {

@@ -5,15 +5,52 @@
 .hero {
     position: relative;
     height: 400px;
-    background: var(--bg-secondary);
-    background-image: url('../images/hero/okinawa-hero.jpg');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 50%, #3498DB 100%);
+    /* 手繪波浪紋理 */
+    background-image:
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 35px,
+            rgba(255, 255, 255, 0.03) 35px,
+            rgba(255, 255, 255, 0.03) 70px
+        ),
+        repeating-linear-gradient(
+            -45deg,
+            transparent,
+            transparent 35px,
+            rgba(255, 255, 255, 0.03) 35px,
+            rgba(255, 255, 255, 0.03) 70px
+        );
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     border-bottom: var(--border-width-stroke) solid var(--border-strong);
+}
+
+/* Hero 裝飾 Emoji */
+.hero::before {
+    content: '🧳 ✈️ 🏝️ 🌺 📋 🗺️ 🎒 🌴';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    opacity: 0.08;
+    letter-spacing: 60px;
+    pointer-events: none;
+    white-space: nowrap;
+    animation: floatEmoji 20s ease-in-out infinite;
+}
+
+@keyframes floatEmoji {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+        transform: translate(-50%, -48%) rotate(1deg);
+    }
 }
 
 .hero-overlay {
